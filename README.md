@@ -1,6 +1,8 @@
-# Luna Invaders
+# Luna Starship (Luna Invaders)
 
 A free-movement Space Invaders-style arcade game built with HTML5 Canvas. Move anywhere on screen, level up for passive abilities, and your progress is saved automatically.
+
+Repository: [christossolonos-bit/Luna-Starship](https://github.com/christossolonos-bit/Luna-Starship)
 
 ## How to play
 
@@ -53,3 +55,8 @@ A free-movement Space Invaders-style arcade game built with HTML5 Canvas. Move a
 - `style.css` — neon arcade styling
 - `game.js` — gameplay, leveling, save system
 - `sounds.js` — Web Audio sound effects
+- `music.js` — procedural ambient music
+
+## License
+
+Apache-2.0 — see [LICENSE](LICENSE).
