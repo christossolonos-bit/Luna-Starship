@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luna Invaders</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>LUNA INVADERS</h1>
+      <div id="hud">
+        <span>Score: <strong id="score">0</strong></span>
+        <span>Wave: <strong id="wave">1</strong></span>
+        <span>Level: <strong id="level">1</strong></span>
+        <span>XP: <strong id="xp">0</strong>/<strong id="xp-max">100</strong></span>
+        <span>High: <strong id="high-score">0</strong></span>
+        <span class="lives-wrap">Lives: <span id="life-hearts" aria-label="3 lives"></span></span>
+        <span class="hp-wrap">Hull: <span id="hp-bar" aria-label="Ship health"><span id="hp-fill"></span></span> <strong id="hp-text">100 / 100</strong></span>
+        <span id="overshield-bar" class="overshield-wrap" style="display:none">Shield: <span class="os-bar"><span id="overshield-fill"></span></span> <strong id="overshield-text"></strong></span>
+      </div>
+    </header>
+
+    <main>
+      <canvas id="game" width="1200" height="900"></canvas>
+
+      <div id="overlay-start" class="overlay visible">
+        <h2>Ready?</h2>
+        <p>Arrow keys to move anywhere · Space to shoot</p>
+        <p class="hint">Level up grants a random ability automatically — weapons, shields & more</p>
+        <p class="hint">3 lives · Hull bar depletes first — empty hull costs one life</p>
+        <button id="btn-start">START GAME</button>
+        <button id="btn-continue" class="hidden">CONTINUE</button>
+      </div>
+
+      <div id="overlay-pause" class="overlay">
+        <h2>Paused</h2>
+        <p>Press P to resume</p>
+      </div>
+
+      <div id="overlay-gameover" class="overlay">
+        <h2>Game Over</h2>
+        <p>Final Score: <strong id="final-score">0</strong></p>
+        <p>Wave Reached: <strong id="final-wave">1</strong></p>
+        <button id="btn-restart">PLAY AGAIN</button>
+      </div>
+    </main>
+
+    <aside id="abilities-panel">
+      <h3>Active Buffs</h3>
+      <ul id="active-abilities"></ul>
+    </aside>
+
+    <footer>
+      <span>P — Pause</span>
+      <span>Ambient music during play</span>
+      <span>Progress saved automatically</span>
+    </footer>
+  </div>
+
+  <script src="sounds.js"></script>
+  <script src="music.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
